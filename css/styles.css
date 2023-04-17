@@ -16,6 +16,12 @@ h3 {
     font-weight: bold;
 }
 
+.bullet-list {
+    color: #8f8f8f;
+    font-weight: 500;
+    text-align: left;
+}
+
 p {
     color: #8f8f8f;
     font-weight: 500;
@@ -81,6 +87,18 @@ body {
     color: rgba(255, 255, 255, 0.848);
 }
 
+#experience {
+    padding: 0 5%;
+    background-color: #1f1f1f;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.848);
+}
+
+.experience-box {
+    text-align: left;
+    padding: 2%;
+}
+
 .feature-box {
     text-align: center;
     padding: 2%;
@@ -97,13 +115,13 @@ body {
 
 #games {
     text-align: center;
-    background-color: #1f1f1f;
+    background-color: #474747;
     color: rgba(255, 255, 255, 0.848);
 }
 
 #apps {
     text-align: center;
-    background-color: #474747;
+    background-color: #1f1f1f;
     color: rgba(255, 255, 255, 0.848);
 }
 
