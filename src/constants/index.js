@@ -145,19 +145,24 @@ export const experiences = [
 // Place PNGs in src/assets/projects/ — see comments on each entry
 export const projects = [
   {
-    name: "Max Slam – Real-Time Multiplayer iGaming",
+    name: "Lost Twins 2 – Puzzle Platformer",
     description:
-      "Real-time multiplayer iGaming platform with server-authoritative architecture, matchmaking, and session management across mobile and WebGL.",
+      "Multi-platform puzzle platformer shipped on Steam, PS5, Xbox Series X|S, Nintendo Switch, iOS, and Android. Designed core time-manipulation systems and physics-driven interactions.",
     tags: [
       { name: "Unity", color: "blue-text-gradient" },
       { name: "C#", color: "green-text-gradient" },
-      { name: "Netcode for GameObjects", color: "pink-text-gradient" },
-      { name: "WebGL", color: "yellow-text-gradient" },
+      { name: "Cross-Platform", color: "pink-text-gradient" },
+      { name: "Console", color: "yellow-text-gradient" },
     ],
-    image: maxSlam,
-    clip: "max-slam",
+    image: lostTwins2,
+    clip: "lost-twins-2",
     links: [
-      { name: "Platform", url: "https://maxduel.com/" },
+      { name: "Website", url: "https://www.playdew.com/lost-twins-2" },
+      { name: "Steam", url: "#" },
+      { name: "PS5", url: "#" },
+      { name: "Xbox Series X|S", url: "#" },
+      { name: "Nintendo Switch", url: "#" },
+      { name: "Android", url: "#" },
     ],
   },
   {
@@ -179,24 +184,19 @@ export const projects = [
     ],
   },
   {
-    name: "Lost Twins 2 – Puzzle Platformer",
+    name: "Max Slam – Real-Time Multiplayer iGaming",
     description:
-      "Multi-platform puzzle platformer shipped on Steam, PS5, Xbox Series X|S, Nintendo Switch, iOS, and Android. Designed core time-manipulation systems and physics-driven interactions.",
+      "Real-time multiplayer iGaming platform with server-authoritative architecture, matchmaking, and session management across mobile and WebGL.",
     tags: [
       { name: "Unity", color: "blue-text-gradient" },
       { name: "C#", color: "green-text-gradient" },
-      { name: "Cross-Platform", color: "pink-text-gradient" },
-      { name: "Console", color: "yellow-text-gradient" },
+      { name: "Netcode for GameObjects", color: "pink-text-gradient" },
+      { name: "WebGL", color: "yellow-text-gradient" },
     ],
-    image: lostTwins2,
-    clip: "lost-twins-2",
+    image: maxSlam,
+    clip: "max-slam",
     links: [
-      { name: "Website", url: "https://www.playdew.com/lost-twins-2" },
-      { name: "Steam", url: "#" },
-      { name: "PS5", url: "#" },
-      { name: "Xbox Series X|S", url: "#" },
-      { name: "Nintendo Switch", url: "#" },
-      { name: "Android", url: "#" },
+      { name: "Platform", url: "https://maxduel.com/" },
     ],
   },
   {
