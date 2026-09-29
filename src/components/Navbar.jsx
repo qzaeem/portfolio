@@ -35,6 +35,9 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
 
+  const [overScenes, setOverScenes] = useState(false);
+
+  const navRef = useRef(null);
   const containerRef = useRef(null);
   const measureRef = useRef(null);
 
@@ -48,6 +51,37 @@ const Navbar = () => {
       setActive('');
     }
   }, [toggle]);
+
+  // Hide while full-screen content marked with data-hide-nav (the project scenes) sits
+  // under the navbar and fills at least half the viewport. The half-viewport rule lets
+  // the navbar return at the page bottom, where the last scene can't scroll fully away.
+  useEffect(() => {
+    const target = document.querySelector('[data-hide-nav]');
+    if (!target) return;
+
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const { top, bottom } = target.getBoundingClientRect();
+      setOverScenes(top <= navRef.current.offsetHeight && bottom >= window.innerHeight / 2);
+    };
+    const schedule = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (overScenes) setToggle(false);
+  }, [overScenes]);
 
   // The desktop row's required width varies with content (nav links, social
   // icons), so we measure it against the available space instead of relying
@@ -116,7 +150,10 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 bg-primary`}
+        ref={navRef}
+        className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 bg-primary transition-opacity duration-500 ${
+          overScenes ? 'opacity-0 pointer-events-none focus-within:opacity-100 focus-within:pointer-events-auto' : 'opacity-100'
+        }`}
       >
         <div ref={containerRef} className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Logo />

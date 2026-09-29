@@ -47,6 +47,34 @@ export const technologies = [
 // Place them in src/assets/company/ and import/export from src/assets/index.js
 export const experiences = [
   {
+    title: "Technical Manager & Project Lead",
+    company_name: "AptechMedia",
+    iconBg: "#915EFF",
+    date: "April 2026 – Present",
+    points: [
+      "Leading Shards of Destiny (working title), a real-time strategy / base-building game for PC.",
+      "Designed and built the core technical architecture: base-building and grid placement, unit AI and pathfinding, resource economy, combat resolution, and progression.",
+      "Specified the server-authoritative backend for player state, base persistence, offline progression, and anti-cheat validation.",
+      "Built live-service foundations from the outset: telemetry, remote configuration, seasonal content cadence, and economy tuning.",
+      "Set up engineering standards, code review, branching strategy, and the CI/CD build pipeline.",
+      "Own delivery for a team of 7 across engineering, art, and design, from roadmap to release planning.",
+    ],
+  },
+  {
+    title: "Technical Lead",
+    company_name: "Section Soft",
+    iconBg: "#915EFF",
+    date: "December 2025 – August 2026",
+    points: [
+      "Technical lead on GOSIVerse 2.0, an enterprise metaverse platform for Saudi Arabia's GOSI, shipped to thousands of members on Android, iOS, and VR.",
+      "Built secure member authentication and onboarding against GOSI's existing member systems.",
+      "Implemented the avatar creation pipeline and a guided profiling flow that generates personalized member profiles.",
+      "Architected the centerpiece \"future self\" experience, letting members talk with a 50–60-year-old projection of themselves about long-term financial outcomes.",
+      "Built the data pipeline linking member profiles to personalized guidance surfaced in conversation.",
+      "Set architecture direction and reviewed implementation quality across a team of 11.",
+    ],
+  },
+  {
     title: "Senior Unity Developer",
     company_name: "MaxDuel (Betsoft Gaming)",
     iconBg: "#915EFF",
@@ -127,6 +155,7 @@ export const projects = [
       { name: "WebGL", color: "yellow-text-gradient" },
     ],
     image: maxSlam,
+    clip: "max-slam",
     links: [
       { name: "Platform", url: "https://maxduel.com/" },
     ],
@@ -142,6 +171,7 @@ export const projects = [
       { name: "Apple Arcade", color: "yellow-text-gradient" },
     ],
     image: explottens,
+    clip: "explottens",
     links: [
       { name: "YouTube", url: "#" },
       { name: "Website", url: "https://www.playdew.com/explottens" },
@@ -159,6 +189,7 @@ export const projects = [
       { name: "Console", color: "yellow-text-gradient" },
     ],
     image: lostTwins2,
+    clip: "lost-twins-2",
     links: [
       { name: "Website", url: "https://www.playdew.com/lost-twins-2" },
       { name: "Steam", url: "#" },
@@ -179,6 +210,7 @@ export const projects = [
       { name: "Client-Server", color: "yellow-text-gradient" },
     ],
     image: duel21,
+    clip: "21-duel",
     links: [
       { name: "Platform", url: "https://maxduel.com/" },
     ],

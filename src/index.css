@@ -19,6 +19,11 @@
   display: block;
 }
 
+.clip-stage {
+  height: 100vh;
+  height: 100svh;
+}
+
 .gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #434343, #000000);

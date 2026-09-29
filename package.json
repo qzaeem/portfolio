@@ -7,13 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clip": "node scripts/encode-clips.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.88.2",
     "@react-three/fiber": "^8.14.5",
     "framer-motion": "^10.12.16",
     "maath": "^0.10.4",
+    "mp4box": "^2.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
